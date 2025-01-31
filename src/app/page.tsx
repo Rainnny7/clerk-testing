@@ -1,5 +1,5 @@
 import type { ReactElement } from "react";
-import {SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/nextjs";
+import {OrganizationSwitcher, SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/nextjs";
 
 const HomePage = (): ReactElement => (
     <main className="min-h-screen flex flex-col gap-3 justify-center items-center">
@@ -10,6 +10,7 @@ const HomePage = (): ReactElement => (
         </SignedOut>
         <SignedIn>
             <UserButton />
+            <OrganizationSwitcher />
         </SignedIn>
     </main>
 );
